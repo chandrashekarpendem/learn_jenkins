@@ -1,8 +1,8 @@
 
 pipeline {
-    agent {
-            node {label 'ansible'}
-    }
+        agent {
+                node {label 'ansible'}
+        }
         stages {
             stage('stage1') {
                 steps {
@@ -26,6 +26,12 @@ pipeline {
                 steps {
                     echo 'hello_universe'
                 }
+            }
+        }
+
+        post {
+            always {
+                echo "send mail"
             }
         }
     }
