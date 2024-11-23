@@ -1,6 +1,3 @@
-@Library('roboshop') _
-ci()
-
 
 // pipeline {
 //         agent {
